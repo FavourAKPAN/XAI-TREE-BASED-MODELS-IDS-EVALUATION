@@ -1,15 +1,15 @@
-# 🔐 E-XAI: Evaluating Explainability of Tree-Based Classifiers for 5G Network Intrusion Detection
+# 🔐 E-XAI: Evaluating Explainability of Tree-Based Classifiers for 5G/6G Network Intrusion Detection
 
 > *Can we trust what a model says — and trust why it says it?*  
-> This project answers that question for six tree-based classifiers applied to 5G network intrusion detection, using a custom multi-dimensional explainability evaluation framework built on TreeSHAP.
+> This project answers that question for six tree-based classifiers applied to 5G/6G network intrusion detection, using a custom multi-dimensional explainability evaluation framework built on TreeSHAP.
 
 ---
 
 ## Overview
 
-Modern 5G networks are high-stakes environments where intrusion detection systems (IDS) must be not only accurate, but *explainable*. Security analysts need to understand *why* a model flagged a flow as malicious — not just that it did.
+Modern 5G/6G networks are high-stakes environments where intrusion detection systems (IDS) must be not only accurate, but *explainable*. Security analysts need to understand *why* a model flagged a flow as malicious — not just that it did.
 
-This project trains and evaluates **six tree-based classifiers** on the **CIC-IoT-2023 5G dataset** for binary intrusion detection (Benign vs. Malicious), then applies a custom **E-XAI (Explainable AI Evaluation) framework** to measure the quality of TreeSHAP explanations across seven interpretability dimensions — revealing that models with near-identical accuracy can differ dramatically in how trustworthy, efficient, and robust their explanations are.
+This project trains and evaluates **six tree-based classifiers** on the **5G-NIDD dataset** for binary intrusion detection (Benign vs. Malicious), then applies a custom **E-XAI (Explainable AI Evaluation) framework** to measure the quality of TreeSHAP explanations across seven interpretability dimensions, revealing that models with near-identical accuracy can differ dramatically in how trustworthy, efficient, and robust their explanations are.
 
 ---
 
@@ -48,7 +48,7 @@ Each model receives a **6-panel dashboard** visualising all metrics, plus cross-
 
 ## Dataset
 
-**CIC-IoT-2023** — 5G Network Traffic (BS1 Attack Scenarios)
+**5G-NIDD DATASET** — 5G Network Traffic (BS1 Attack Scenarios)
 
 - **728,316** total network flow records
 - **Benign:** 406,959 samples (55.9%)
@@ -76,7 +76,7 @@ All models trained with `random_state=42` and 100 estimators (where applicable) 
 
 ```
 📦 root
- ┣ 📓 favour-projectb.ipynb       # Main notebook — full pipeline end-to-end
+ ┣ 📓 TreeSHAP_IDS_EXPERIMENTS.ipynb       # Main notebook — full pipeline end-to-end
  ┣ 📊 exai_dashboard_*.png        # Per-model E-XAI dashboards (6 models)
  ┣ 📊 exai_heatmap_comparison.png # Cross-model metric heatmap
  ┣ 📊 exai_radar_comparison.png   # Cross-model radar chart
@@ -153,7 +153,7 @@ pip install numpy pandas scikit-learn matplotlib seaborn shap xgboost lightgbm c
 
 ## Running the Notebook
 
-1. Download the **CIC-IoT-2023 BS1 dataset** from [Kaggle](https://www.kaggle.com) and update the data path in Cell 4:
+1. Download the **5G-NIDD DATASET** from [Kaggle]((https://www.kaggle.com/datasets/humera11/5g-nidd-dataset)) and update the data path in Cell 4:
    ```python
    path = "/your/path/to/BS1_each_attack_csv/*.csv"
    ```
@@ -171,10 +171,10 @@ If you use this framework or findings in your work, please cite:
 ```bibtex
 @misc{exai_5g_ids,
   title   = {E-XAI: Evaluating Explainability of Tree-Based Classifiers for 5G Network Intrusion Detection},
-  author  = {Favour},
-  year    = {2025},
+  author  = {Favour Akpan},
+  year    = {2026},
   note    = {GitHub repository},
-  url     = {https://github.com/your-username/your-repo}
+  url     = {[https://github.com/FavourAKPAN/XAI-TREE-BASED-MODELS-IDS-EVALUATION]}
 }
 ```
 
