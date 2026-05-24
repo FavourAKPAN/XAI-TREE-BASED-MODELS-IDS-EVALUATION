@@ -170,7 +170,7 @@ If you use this framework or findings in your work, please cite:
 
 ```bibtex
 @misc{exai_5g_ids,
-  title   = {E-XAI: Evaluating Explainability of Tree-Based Classifiers for 5G Network Intrusion Detection},
+  title   = {E-XAI: Evaluating Explainability of Tree-Based Classifiers for 5G/6G Network Intrusion Detection},
   author  = {Favour Akpan},
   year    = {2026},
   note    = {GitHub repository},
